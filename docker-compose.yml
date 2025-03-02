@@ -1,0 +1,19 @@
+services:
+  orders-db:
+    image: postgres:16-alpine
+    container_name: orders-db
+    command: postgres -c 'max_connections=50'
+    restart: always
+    ports:
+      - "5433:5432"
+    environment:
+      - POSTGRES_DB=orders
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=postgres
+      - PGDATA=/var/lib/postgresql/data
+    healthcheck:
+      test: "exit 0"
+    volumes:
+      - orders_db_data:/var/lib/postgresql/data
+volumes:
+  orders_db_data: {}

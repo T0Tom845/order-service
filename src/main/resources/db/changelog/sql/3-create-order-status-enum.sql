@@ -1,0 +1,11 @@
+CREATE TYPE order_status AS ENUM ('Received',
+    'Processing',
+    'Shipped',
+    'Transit',
+    'Out for delivery',
+    'Delivered',
+    'Delivery Attempted',
+    'Delivery Failed',
+    'On Hold',
+    'Pending',
+    'Returned to Sender');

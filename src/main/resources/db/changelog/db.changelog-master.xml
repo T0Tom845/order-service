@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+        http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-latest.xsd">
+
+    <include file="sql/1-create-order-scheme.sql" relativeToChangelogFile="true"/>
+    <include file="sql/2-create-client-table.sql" relativeToChangelogFile="true"/>
+
+    <include file="sql/3-create-order-status-enum.sql" relativeToChangelogFile="true"/>
+    <include file="sql/4-create-order-table.sql" relativeToChangelogFile="true"/>
+
+    <include file="sql/5-create-payment-method-enum.sql" relativeToChangelogFile="true"/>
+    <include file="sql/6-create-invoice-status-enum.sql" relativeToChangelogFile="true"/>
+    <include file="sql/7-create-invoice-table.sql" relativeToChangelogFile="true"/>
+
+</databaseChangeLog>
